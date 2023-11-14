@@ -20,6 +20,6 @@ Rails.application.routes.draw do
   get "tasks/:id/edit", to: "tasks#edit", as: :edit
   # Patch form to edit task
   patch "tasks/:id", to: "tasks#update"
-  # Delete a task
+  # Delete a task from
   delete "tasks/:id", to: "tasks#destroy"
 end
