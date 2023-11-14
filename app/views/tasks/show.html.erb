@@ -1,0 +1,13 @@
+
+<div class="ms-4 mt-4">
+  <h1><%= @task.title %></h1>
+  <h4><%= @task.details %></h4>
+  <div class="my-2 p-2">
+    <input type="checkbox" value="checkbox">
+    <label for="checkbox">Task complete?</label>
+  </div>
+  <div class="buttons">
+    <%= link_to "Edit this task", edit_path(@task), class:"btn btn-primary" %>
+    <%= link_to "Back to list", tasks_path, class:"btn btn-primary" %>
+  </div>
+</div>

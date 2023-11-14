@@ -1,0 +1,16 @@
+<div class="container mt-4 ms-4">
+<h1>My tasks</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <li class="d-flex align-items-center">
+      -
+      <%= link_to "#{task.title}", task_path(task), class:"btn p-0" %>
+      <%= link_to  tasks_path(@restaurant), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do%>
+        <i class="fa-solid fa-trash"></i>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a new task", tasks_new_path, class:"btn btn-primary"%>
+</div>
